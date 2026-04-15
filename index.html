@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Programming Learning Hub</title>
+
+<style>
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+}
+
+header {
+  text-align: center;
+  padding: 30px;
+  background: linear-gradient(90deg,#ff512f,#dd2476);
+}
+
+header h1 { margin: 0; font-size: 32px; }
+header p { margin-top: 8px; opacity: 0.9; }
+
+nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+  padding: 15px;
+  background: #0b0b0b;
+}
+
+nav button {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+nav button:hover { transform: scale(1.05); }
+
+section { display:none; padding:20px; }
+.active { display:block; }
+
+.card {
+  background: rgba(255,255,255,0.08);
+  padding: 18px;
+  border-radius: 12px;
+  margin: 12px 0;
+}
+
+h2 { color: #ffd369; }
+
+ul { line-height: 1.8; }
+
+a { color: #00e5ff; text-decoration: none; }
+
+a:hover { text-decoration: underline; }
+
+input, button.quiz-btn {
+  padding: 8px;
+  margin-top: 8px;
+  border-radius: 6px;
+  border: none;
+}
+
+button.quiz-btn {
+  background:#00c6ff;
+  color:#000;
+  cursor:pointer;
+}
+
+footer {
+  background: #000;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🚀 Programming Learning Hub</h1>
+<p>Welcome Engineers & Engineers-to-be 👩‍💻👨‍💻</p>
+<p>Build. Learn. Innovate. Your journey into Software Engineering starts here.</p>
+<p>Every great engineer was once a beginner — keep going and you will get there.</p>
+</header>
+
+<nav>
+<button onclick="show('home')">Home</button>
+<button onclick="show('frontend')">Frontend</button>
+<button onclick="show('backend')">Backend</button>
+<button onclick="show('python')">Python</button>
+<button onclick="show('web')">Tools</button>
+<button onclick="show('java')">Java</button>
+</nav>
+
+<section id="home" class="active">
+<div class="card">
+<h2>👋 Welcome</h2>
+<p>This hub explains programming, provides resources, research papers, and quizzes.</p>
+</div>
+
+<div class="card">
+<h3>📚 Platforms</h3>
+<ul>
+<li>freeCodeCamp</li>
+<li>W3Schools</li>
+<li>MDN Web Docs</li>
+<li>GeeksforGeeks</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>📄 Research Papers</h3>
+<ul>
+<li><a href="https://arxiv.org" target="_blank">arXiv (Computer Science Papers)</a></li>
+<li><a href="https://scholar.google.com" target="_blank">Google Scholar</a></li>
+</ul>
+</div>
+</section>
+
+<!-- FRONTEND -->
+<section id="frontend">
+<div class="card">
+<h2>🎨 Frontend</h2>
+<p>Frontend = everything users see (UI).</p>
+<p>Skills: HTML, CSS, JavaScript</p>
+<p><b>Used in:</b> Websites, Apps UI, Dashboards</p>
+</div>
+
+<div class="card">
+<h3>📚 Learn</h3>
+<ul>
+<li>freeCodeCamp</li>
+<li>MDN Docs</li>
+<li>W3Schools</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>💻 Practice</h3>
+<ul>
+<li>CodePen</li>
+<li>JSFiddle</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>🧠 Quiz</h3>
+<p>What does HTML do?</p>
+<button class="quiz-btn" onclick="alert('Correct: Structure of web pages')">Structure of web pages</button>
+<button class="quiz-btn" onclick="alert('Wrong')">Database management</button>
+</div>
+</section>
+
+<!-- BACKEND -->
+<section id="backend">
+<div class="card">
+<h2>⚙️ Backend</h2>
+<p>Backend = server side logic + data handling</p>
+<p><b>Used in:</b> APIs, Databases, Authentication systems</p>
+</div>
+
+<div class="card">
+<h3>📚 Learn</h3>
+<ul>
+<li>Node.js</li>
+<li>Django</li>
+<li>Spring Boot</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>💻 Practice</h3>
+<ul>
+<li>Build APIs</li>
+<li>Login systems</li>
+<li>Databases</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>🧠 Quiz</h3>
+<p>Backend is responsible for?</p>
+<button class="quiz-btn" onclick="alert('Correct: Server logic and data')">Server logic and data</button>
+<button class="quiz-btn" onclick="alert('Wrong')">UI design</button>
+</div>
+</section>
+
+<!-- PYTHON -->
+<section id="python">
+<div class="card">
+<h2>🐍 Python</h2>
+<p>Used in AI, automation, data science</p>
+<p><b>Used in:</b> AI, Web apps, Automation</p>
+</div>
+
+<div class="card">
+<h3>📚 Learn</h3>
+<ul>
+<li>Coursera</li>
+<li>Udemy</li>
+<li>W3Schools</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>🧠 Quiz</h3>
+<p>Python is mainly used for?</p>
+<button class="quiz-btn" onclick="alert('Correct: AI & Automation')">AI & Automation</button>
+<button class="quiz-btn" onclick="alert('Wrong')">Only websites</button>
+</div>
+</section>
+
+<!-- TOOLS -->
+<section id="web">
+<div class="card">
+<h2>🌐 Tools</h2>
+<ul>
+<li>GitHub</li>
+<li>Stack Overflow</li>
+<li>Replit</li>
+</ul>
+</div>
+</section>
+
+<!-- JAVA -->
+<section id="java">
+<div class="card">
+<h2>☕ Java</h2>
+<p>Used in mobile apps and enterprise systems</p>
+<p><b>Used in:</b> Android apps, Banks systems</p>
+</div>
+
+<div class="card">
+<h3>🧠 Quiz</h3>
+<p>Java is used in?</p>
+<button class="quiz-btn" onclick="alert('Correct: Apps and backend systems')">Apps and backend systems</button>
+<button class="quiz-btn" onclick="alert('Wrong')">Only design</button>
+</div>
+</section>
+
+<footer>
+<p>© 2026 Programming Learning Hub</p>
+<p>Zeinab Makkawi</p>
+<p>zeinab@example.com</p>
+</footer>
+
+<script>
+function show(id){
+  document.querySelectorAll('section').forEach(s=>s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+</script>
+
+</body>
+</html>
